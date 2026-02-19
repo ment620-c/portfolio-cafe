@@ -1,0 +1,346 @@
+:root{
+    --mainbeige :#d8cab8;
+    --mainbeige: #A78b6e;
+    --basegreen: #9aae95;
+    --basebrown: #4B3F36;
+    --fonttitle:"Noto Sans";
+    --fonttext:"Noto Sans JP";
+} 
+
+   #hamburger {
+    display: block;
+    position: fixed;
+    top: 28px;    
+    right: 24px;   
+    width: 32px;
+    height: 24px;
+    z-index: 3000;
+ 
+}
+
+  .inner_line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transition: all .3s;
+  }
+
+  #line1 { top: 0; }
+  #line2 { top: 10px; }
+  #line3 { bottom: 0; }
+
+  /* バツ印 */
+  #line1.line_1 {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  #line2.line_2 {
+    opacity: 0;
+  }
+
+  #line3.line_3 {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+/* ========= pc==============
+===========================*/
+
+@media screen and (min-width:768px){
+  
+#hamburger {
+  display: none;
+}
+
+.nav-btn {
+  display: inline-block;
+}
+/* ===== ヘッダー全体 ===== */
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #d8cab8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+}
+
+/* ===== ヘッダー内のレイアウト ===== */
+.logo{
+  margin-right: 50px;
+}
+.nav{
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+   display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    position: static;
+    background: transparent;
+}
+
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btn{
+  display: flex;
+  font-size: 13px;
+  background-color: #9aae95;
+  color: aliceblue;
+  border-radius: 30px;
+  padding: 13px ;
+  margin-left: 30px;
+  }
+
+  .nav-btn:hover{
+  background-color: #495347;
+}
+
+/* ===== ロゴ ===== */
+.logo img {
+  height: 80px;
+}
+
+/* ===== ナビゲーション ===== */
+
+.nav-item a {
+  text-decoration: none;
+  color:var(--basebrown);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #d8a676; 
+}
+
+.btn-navi{
+  display: flex;
+  font-size:.85rem;
+  background-color: #9aae95;
+  color: aliceblue;
+  border-radius: 30px;
+  padding: .33rem 1.3rem;
+}
+
+
+
+/* ========sns========== */
+
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+  text-align: center;
+  padding-top:200px ;
+}
+
+
+
+.sns{
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  height: 57px;
+  padding-top: 80px;
+}
+.sns img{
+ width: auto;
+ height:60px;          
+ object-fit: contain;
+ margin: 0 auto;
+ display: block;  
+}
+.img.x{
+  margin-top: -30px;
+}
+
+.contact{
+  margin-top: 24px;
+  text-align: center;
+}
+
+  
+.btn{
+  position: absolute;
+  display: flex;
+  font-size: 1rem;
+  background-color: #9aae95;
+  color: aliceblue;
+  border-radius: 30px;
+  padding:  8px;
+  margin-bottom: 50px;
+}
+
+.btn:hover{
+  background-color: #495347;
+}
+
+.copyright {
+  background-color:rgba(167, 139, 110, 0.3); 
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #ddd; /* 上に線を入れたい場合 */
+}
+
+/* ===== Footer ===== */
+.footer{
+ background-color:rgba(167, 139, 110, 0.3); 
+
+}
+
+.shoplist{
+align-items:center;
+text-align: center;
+justify-content: center;
+align-self: flex-end;
+
+
+}
+.shoplist img{
+  width: 100%;
+ height:250px;           
+ object-fit: cover;
+ 
+}
+.address{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 90px 40px;
+  justify-content:center; 
+  gap: 100px;
+  flex-wrap: wrap;
+  flex: 1;
+
+}
+.map-wrapper h3{
+  margin-bottom:4px;
+}
+.map iframe {
+  border-radius: 5px;
+}
+.map p{
+   margin-top: 5px;
+}
+.contact:hover{
+  color:#d8a676;
+}
+
+.align-center .btn{
+  margin-left: 30px;
+}
+
+}
+
+/* ===== スマホ===============
+============================ */
+@media screen and (max-width: 768px) {
+body {
+    padding-top: 70px;   
+      }
+
+  /* ナビ */
+  .header{
+    background-color:#d8cab8 ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2000;
+    
+  }
+  .header-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  .nav {
+    top: 70px;           
+    width: 100%;
+    z-index: 1500;
+   
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+
+
+  /* JSで表示 */
+  .nav.in .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+
+  }
+.header-inner img{
+  width: 70px;
+  height: 70px;
+
+}
+  .nav-btn {
+    display: none;
+  }
+
+  /* フッター */
+  .footer-wrapper { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shoplist img {
+    height: 200px; 
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+
+  .address{
+    text-align: center;}
+    
+    .map{
+    padding-left:100px;
+   }
+  .sns img { 
+    height: 50px;
+  }
+
+}
+
+   
